@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script src="livraria.js"></script>
+    <style>
+        div{
+            margin: 3px;
+        }
+        a{
+            margin: 5px;
+        }
+        .box {
+            border: 1px solid black;
+            margin: 1px;
+            padding: 1px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="divEdit" class="box">
+        <div>Id</div>
+        <div><input type="text" id="txtId" /></div>
+
+        <div>Nome</div>
+        <div><input type="text" id="txtNome" /></div>
+
+        <div>Autor</div>
+        <div><input type="text" id="txtAutor" /></div>
+
+        <div>Páginas</div>
+        <div><input type="text" id="txtPaginas" /></div>
+
+        <div>
+            <a href="#" onclick="gravar()">Gravar</a>
+            <a href="#" onclick="cancelar()">Cancelar</a>
+        </div>
+    </div>
+
+    <div id="boxLista" class="box">
+        <h4>Livros:</h4>
+        <a href="#" onclick="novoLivro()">Novo livro</a>
+        <div id="lista">
+        </div>
+    </div>
+        <script language="javascript">
+            getLivros();
+            toggleListaEdit();
+        </script>
+</body>
+</html>
